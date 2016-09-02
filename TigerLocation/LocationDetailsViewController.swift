@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CoreLocation
+
 
 
 import UIKit
@@ -19,7 +21,8 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    let gittest=0
+    var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+    var placemark : CLPlacemark?
     
     @IBAction func done() {
         dismissViewControllerAnimated(true, completion: nil)

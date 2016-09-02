@@ -68,7 +68,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tag Location"/>
                                 <connections>
-                                    <segue destination="C0r-R4-kop" kind="modal" id="8xD-ad-dYh"/>
+                                    <segue destination="C0r-R4-kop" kind="modal" identifier="TagLocation" id="8xD-ad-dYh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,7 +91,6 @@
         <!--Tag Location-->
         <scene sceneID="guV-BL-d4D">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0W9-8A-dwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="haC-ky-Xxb" customClass="LocationDetailsViewController" customModule="TigerLocation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="kTC-Cg-sw9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -113,9 +112,6 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="haC-ky-Xxb" id="Ylm-Vc-dOC"/>
-                                                    </connections>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -285,7 +281,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="Mff-eY-4eS" id="x6R-Lx-HPE"/>
+                        <outlet property="categoryLabel" destination="8PS-4r-ECg" id="uGf-QV-BSx"/>
+                        <outlet property="dateLabel" destination="BUp-Mu-DcZ" id="sTS-Yx-a0X"/>
+                        <outlet property="descriptionTextView" destination="FEx-tI-x24" id="th5-wY-vyM"/>
+                        <outlet property="latitudeLabel" destination="MX6-d4-Sat" id="pF9-ij-ISu"/>
+                        <outlet property="longitudeLabel" destination="UNX-bt-p1j" id="ptT-M4-slI"/>
+                    </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0W9-8A-dwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1163" y="-303"/>
         </scene>
