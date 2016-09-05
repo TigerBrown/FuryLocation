@@ -17,6 +17,11 @@ let dateFormatter: NSDateFormatter = {
     return formatter
 }()
 
+let categories = ["No Category", "Apple Store", "Bar", "Bookstore", "Club",
+    "Grocery Store", "Historic Building", "House",
+    "Icecream Vendor", "Landmark",
+    "Park"]
+
 func formatDate(date: NSDate) -> String {
     return dateFormatter.stringFromDate(date)
 }

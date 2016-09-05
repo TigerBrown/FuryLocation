@@ -60,7 +60,7 @@ class LocationDetailsViewController: UITableViewController {
             print("addressLabel.bounds.size.height : \(  addressLabel.bounds.size.height)")
             print("addressLabel.frame.size.width : \(addressLabel.frame.size.width)")
             print("addressLabel.frame.size.height : \(addressLabel.frame.size.height)")
-            addressLabel.frame.origin.x = view.bounds.size.width-addressLabel.frame.size.width+30
+            addressLabel.frame.origin.x = view.bounds.size.width-addressLabel.frame.size.width+15
             
             print("view.bounds.size.width  : \(view.bounds.size.width )")
             print("view.bounds.size.height  : \(view.bounds.size.height )")
