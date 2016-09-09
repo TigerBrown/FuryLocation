@@ -24,6 +24,8 @@ class LocationDetailsViewController: UITableViewController {
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark : CLPlacemark?
     
+    var categoryName = "No Category"
+    
     @IBAction func done() {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -35,7 +37,8 @@ class LocationDetailsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionTextView.text = ""
-        categoryLabel.text = ""
+        categoryLabel.text = categoryName
+        //categoryLabel.text = ""
         latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
         longitudeLabel.text = String(format: "%.8f", coordinate.longitude)
         if let placemark = placemark {
@@ -44,6 +47,10 @@ class LocationDetailsViewController: UITableViewController {
         addressLabel.text = "No Address Found"
         }
         dateLabel.text = formatDate(NSDate())
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self,action: Selector("hideKeyboard:"))
+        gestureRecognizer.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(gestureRecognizer)
     }
     
     override func tableView(tableView: UITableView,
@@ -75,5 +82,45 @@ class LocationDetailsViewController: UITableViewController {
             return 44
         }
     }
+    
+    override func tableView(tableView:UITableView,willSelectRowAtIndexPath indexPath:NSIndexPath)->NSIndexPath?{
+        if indexPath.section==1 || indexPath.section==0 {
+            return indexPath
+        }
+        return nil
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section==0 && indexPath.section==0 {
+           descriptionTextView.becomeFirstResponder()
+        }
 
+    }
+
+
+
+    
+    override func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PickCategory" {
+            let controller = segue.destinationViewController as! CategoryPickerController
+            controller.selectedCategoryName = categoryName
+        }
+    }
+    
+    @IBAction func categoryPickerDidPickCategory (segue : UIStoryboardSegue) {
+        let controller = segue.sourceViewController as! CategoryPickerController
+        categoryName = controller.selectedCategoryName
+        categoryLabel.text = categoryName
+    }
+    
+    func hideKeyboard(gestureRecognizer: UIGestureRecognizer) {
+        let point = gestureRecognizer.locationInView(tableView)
+        let indexPath = tableView.indexPathForRowAtPoint(point)
+        if indexPath != nil && indexPath!.section == 0 && indexPath!.row == 0 {
+            return
+        }
+        descriptionTextView.resignFirstResponder()
+    }
+//
+//
 }

@@ -13,7 +13,7 @@
 		BE3508951D6070D7004506D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3508931D6070D7004506D8 /* Main.storyboard */; };
 		BE3508971D6070D8004506D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3508961D6070D8004506D8 /* Assets.xcassets */; };
 		BE35089A1D6070D8004506D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3508981D6070D8004506D8 /* LaunchScreen.storyboard */; };
-		BE516EF91D7D2F8600D9301B /* CatogoryPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE516EF81D7D2F8600D9301B /* CatogoryPickerController.swift */; };
+		BE516EF91D7D2F8600D9301B /* CategoryPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE516EF81D7D2F8600D9301B /* CategoryPickerController.swift */; };
 		BE59248A1D7BCE0200A42FBA /* GlobalLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5924891D7BCE0200A42FBA /* GlobalLet.swift */; };
 		BEF507C51D72E89200441BD2 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF507C41D72E89200441BD2 /* LocationDetailsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +27,7 @@
 		BE3508961D6070D8004506D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE3508991D6070D8004506D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE35089B1D6070D8004506D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE516EF81D7D2F8600D9301B /* CatogoryPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatogoryPickerController.swift; sourceTree = "<group>"; };
+		BE516EF81D7D2F8600D9301B /* CategoryPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerController.swift; sourceTree = "<group>"; };
 		BE5924891D7BCE0200A42FBA /* GlobalLet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalLet.swift; sourceTree = "<group>"; };
 		BEF507C41D72E89200441BD2 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +79,7 @@
 				BE35088F1D6070D7004506D8 /* CurrentLocationViewController.swift */,
 				BE3508911D6070D7004506D8 /* SecondViewController.swift */,
 				BEF507C41D72E89200441BD2 /* LocationDetailsViewController.swift */,
-				BE516EF81D7D2F8600D9301B /* CatogoryPickerController.swift */,
+				BE516EF81D7D2F8600D9301B /* CategoryPickerController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 				BEF507C51D72E89200441BD2 /* LocationDetailsViewController.swift in Sources */,
 				BE3508921D6070D7004506D8 /* SecondViewController.swift in Sources */,
 				BE35088E1D6070D7004506D8 /* AppDelegate.swift in Sources */,
-				BE516EF91D7D2F8600D9301B /* CatogoryPickerController.swift in Sources */,
+				BE516EF91D7D2F8600D9301B /* CategoryPickerController.swift in Sources */,
 				BE3508901D6070D7004506D8 /* CurrentLocationViewController.swift in Sources */,
 				BE59248A1D7BCE0200A42FBA /* GlobalLet.swift in Sources */,
 			);
